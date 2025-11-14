@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>Modern Calculator</h1>
+    <div class="calculator">
+      <input type="text" id="display" readonly />
+
+      <div class="calculator_keys">
+        <button style="background: linear-gradient(to right, #4ecb63, #3aba4f);" onclick="clean()" class="clean-btn">AC</button>
+        <button style="background: linear-gradient(to right, #fe6d70, #f25c6d);" onclick="erase()" class="clean-btn">←</button>
+        <button class="key-operator" onclick="add('%')">%</button>
+        <button class="key-operator" onclick="add('/')">÷</button>
+
+        <button onclick="add('7')">7</button>
+        <button onclick="add('8')">8</button>
+        <button onclick="add('9')">9</button>
+        <button class="key-operator" onclick="add('*')">&times;</button>
+
+        <button onclick="add('4')">4</button>
+        <button onclick="add('5')">5</button>
+        <button onclick="add('6')">6</button>
+        <button class="key-operator" onclick="add('-')">-</button>
+
+        <button onclick="add('1')">1</button>
+        <button onclick="add('2')">2</button>
+        <button onclick="add('3')">3</button>
+        <button class="key-operator" onclick="add('+')">+</button>
+
+        <button onclick="add('0')">0</button>
+        <button style="grid-column-end: span 2; width: 96px;" onclick="add('.')">.</button>
+        <button
+          class="key-operator"
+          onclick="calc()"
+          
+        >
+          =
+        </button>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
